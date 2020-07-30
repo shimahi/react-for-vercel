@@ -1,5 +1,6 @@
 const path = require('path')
 const WorkerPlugin = require('worker-plugin')
+const HTMLPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: './src/index.tsx',
@@ -61,5 +62,10 @@ module.exports = {
       src: path.resolve(__dirname, 'src'),
     },
   },
-  plugins: [new WorkerPlugin()],
+  plugins: [
+    new HTMLPlugin({
+      template: path.join(__dirname, 'src/index.html'),
+    }),
+    new WorkerPlugin(),
+  ],
 }
