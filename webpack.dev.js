@@ -12,7 +12,7 @@ module.exports = merge(common, {
   },
   plugins: [
     new HTMLPlugin({
-      template: path.join(__dirname, 'src/index.html'),
+      template: path.join(__dirname, 'dist/index.html'),
     }),
     new Dotenv({
       path: path.join(__dirname, '.env.development'),

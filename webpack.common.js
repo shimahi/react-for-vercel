@@ -1,5 +1,5 @@
-const path = require('path');
-const WorkerPlugin = require('worker-plugin');
+const path = require('path')
+const WorkerPlugin = require('worker-plugin')
 
 module.exports = {
   entry: './src/index.tsx',
@@ -62,4 +62,4 @@ module.exports = {
     },
   },
   plugins: [new WorkerPlugin()],
-};
+}
