@@ -1,5 +1,5 @@
 node_modules
-dist/*.js
+dist/*
 yarn-error.log
 .DS_Store
 .vscode
