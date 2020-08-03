@@ -3,6 +3,6 @@ public/*
 yarn-error.log
 .DS_Store
 .vscode
-.env
+# .env
 
 .vercel
