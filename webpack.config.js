@@ -1,6 +1,7 @@
 const path = require('path')
 const WorkerPlugin = require('worker-plugin')
 const HTMLPlugin = require('html-webpack-plugin')
+const Dotenv = require('dotenv-webpack')
 
 module.exports = {
   entry: './src/index.tsx',
@@ -67,5 +68,8 @@ module.exports = {
       template: path.join(__dirname, 'src/index.html'),
     }),
     new WorkerPlugin(),
+    new Dotenv({
+      path: path.join(__dirname, '.env'),
+    }),
   ],
 }

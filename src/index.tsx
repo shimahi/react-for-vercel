@@ -4,7 +4,12 @@ import React from 'react'
 import { render } from 'react-dom'
 
 const App = () => {
-  return <h1>Hello React!!!</h1>
+  return (
+    <h1>
+      {console.log(process.env.INU)}
+      Hello React!!!
+    </h1>
+  )
 }
 
 render(<App />, document.getElementById('root'))
