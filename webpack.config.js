@@ -2,8 +2,9 @@ const path = require('path')
 const WorkerPlugin = require('worker-plugin')
 const HTMLPlugin = require('html-webpack-plugin')
 const { argv } = require('yargs')
-const DotenvWebpackPlugin = require('dotenv-webpack')
+const Dotenv = require('dotenv-webpack')
 const { EnvironmentPlugin } = require('webpack')
+
 module.exports = {
   entry: './src/index.tsx',
   output: {
@@ -69,8 +70,8 @@ module.exports = {
       template: path.join(__dirname, 'src/index.html'),
     }),
     new WorkerPlugin(),
-    argv.develop
-      ? new DotenvWebpackPlugin({ path: path.join(__dirname, '.env') })
+    argv.mode === 'development'
+      ? new Dotenv({ path: path.join(__dirname, '.env') })
       : new EnvironmentPlugin(Object.keys(process.env)),
   ],
 }
