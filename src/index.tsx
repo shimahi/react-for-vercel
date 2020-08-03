@@ -7,6 +7,7 @@ const App = () => {
   return (
     <h1>
       {console.log(process.env.INU)}
+      {process.env.INU}
       Hello React!!!
       {process.env.NODE_ENV}
     </h1>
